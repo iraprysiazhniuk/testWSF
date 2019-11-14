@@ -1,0 +1,331 @@
+@font-face {
+    font-family: 'Circe-Bold';
+    src: url(../fonts/Circe-Bold.otf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe-Regular';
+    src: url(../fonts/Circe-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bahnschrift-Bold';
+    src: url(../fonts/BAHNSCHRIFT.TTF);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proximanova-Regular';
+    src: url(../fonts/proximanova-regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-size: 14px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.body_slides {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: -2;
+    background: #000;
+}
+
+.body_slides,
+.body_slides:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.body_slides li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: none;
+    opacity: 0;
+    -webkit-animation: anim_slides 54s linear infinite 0s;
+    -moz-animation: anim_slides 54s linear infinite 0s;
+    -o-animation: anim_slides 54s linear infinite 0s;
+    -ms-animation: anim_slides 54s linear infinite 0s;
+    animation: anim_slides 54s linear infinite 0s;
+}
+
+.body_slides li:nth-child(1) {
+    background-image: url(../img/bg1.png)
+}
+
+.body_slides li:nth-child(2) {
+    -webkit-animation-delay: 6.0s;
+    -moz-animation-delay: 6.0s;
+    background-image: url(../img/1.png)
+}
+
+.body_slides li:nth-child(3) {
+    -webkit-animation-delay: 12.0s;
+    -moz-animation-delay: 12.0s;
+    background-image: url(../img/2.png)
+}
+
+.body_slides li:nth-child(4) {
+    -webkit-animation-delay: 18.0s;
+    -moz-animation-delay: 18.0s;
+    background-image: url(../img/3.png)
+}
+
+.body_slides li:nth-child(5) {
+    -webkit-animation-delay: 24.0s;
+    -moz-animation-delay: 24.0s;
+    background-image: url(../img/4.png)
+}
+
+.body_slides li:nth-child(6) {
+    -webkit-animation-delay: 30.0s;
+    -moz-animation-delay: 30.0s;
+    background-image: url(../img/5.png)
+}
+
+.body_slides li:nth-child(7) {
+    -webkit-animation-delay: 36.0s;
+    -moz-animation-delay: 36.0s;
+    background-image: url(../img/6.png)
+}
+
+.body_slides li:nth-child(8) {
+    -webkit-animation-delay: 42.0s;
+    -moz-animation-delay: 42.0s;
+    background-image: url(../img/7.png)
+}
+
+@-webkit-keyframes anim_slides {
+    0% {
+        opacity: 0;
+    }
+    6% {
+        opacity: 1;
+    }
+    24% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes anim_slides {
+    0% {
+        opacity: 0;
+    }
+    6% {
+        opacity: 1;
+    }
+    24% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #1e1e1e;
+    height: 10vh;
+}
+
+.logo {
+    width: 42%;
+}
+
+.logo img {
+    margin-left: 8%;
+}
+
+.pages {
+    width: 22%;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Circe-Bold';
+}
+
+.pages a {
+    color: #a59c9c;
+    text-decoration: none;
+}
+
+.pages a:hover {
+    color: #ffffff;
+}
+
+.menu {
+    width: 24%;
+    display: flex;
+    color: #ffffff;
+    justify-content: flex-end;
+    font-family: 'Circe-Bold';
+}
+
+.menu button {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    width: 36%;
+    justify-content: space-between;
+}
+
+.menu button img {
+    padding-bottom: 0.2vh;
+}
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    font-size: 14px;
+    font-family: 'Circe-Bold';
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 10rem;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+.language {
+    display: flex;
+    width: 8%;
+    justify-content: flex-end;
+}
+
+.language select {
+    font-family: 'Circe-Bold';
+    color: #ffffff;
+    background: #1e1e1e;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+}
+
+.main-content {
+    display: flex;
+    width: 95%;
+    justify-content: space-around;
+    height: inherit;
+    align-items: center;
+}
+
+.social-networks {
+    font-family: 'Circe-Regular';
+    background: #1e1e1e;
+    width: 5%;
+    height: 77vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-networks a {
+    color: #a59c9c;
+    text-decoration: none;
+    padding-bottom: 5vh;
+}
+
+.social-networks a:hover {
+    color: #ffffff;
+}
+
+.ins,
+.tw,
+.in {
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: tb-rl;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 13vh;
+}
+
+.footer-content {
+    width: 80%;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.projects {
+    font-family: 'Bahnschrift-Bold';
+    padding-bottom: 1.5vh;
+}
+
+.successfull-projects,
+.designed-objects {
+    font-family: 'Proximanova-Regular';
+    color: #a59c9c;
+    width: 21%;
+}
+
+.down button {
+    background: transparent;
+    border: none;
+}
